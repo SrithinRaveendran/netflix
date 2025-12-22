@@ -33,7 +33,7 @@
 
 .chooseYourProfileContainer{
     background-image:linear-gradient( rgb(200, 194, 194),rgb(200, 193, 196));
-    height: 28%;
+    height: 30%;
     width: 100%;
     /* border: solid 2px black; */
     position : fixed;
@@ -55,7 +55,7 @@
 
 .ProfileSectionMainConatiner{
     z-index: 10;
-    height: 40vh;
+    height: 41vh;
     width: 100%;
     /* border: solid 2px blue; */ 
     display: flex;
