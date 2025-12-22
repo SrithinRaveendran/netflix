@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    border: 0px;
+}
+/* all borders are important for testinf dont remove */
+.FrontPageMainBackground {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(191, 79, 79);
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.posterContainer{
+    background-image: url("./Fight Club (1999).png");
+    background-size: cover;
+    height: 75%;
+    width: 100%;
+    /* border: solid 2px black; */
+    z-index:0;
+}
+
+.chooseYourProfileMainContainer{
+    /* border : solid 2px red; */
+    height: 25%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index:10;
+}
+
+.chooseYourProfileContainer{
+    background-image:linear-gradient( rgb(200, 194, 194),rgb(200, 193, 196));
+    height: 28%;
+    width: 100%;
+    /* border: solid 2px black; */
+    position : fixed;
+    z-index: 0;
+    margin : 0px;
+}
+
+.oval{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /* background-color:aquamarine;   */
+     background-color: rgb(200, 194, 194);  
+    bottom: 50%;
+    clip-path: ellipse(60% 20%);
+    z-index:1;
+    margin : 0px;
+}
+
+.ProfileSectionMainConatiner{
+    z-index: 10;
+    height: 36vh;
+    width: 100%;
+    /* border: solid 2px blue; */ 
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    position: fixed;
+}
+
+.profile{
+    width: 100px;
+    height: 120px;
+    /* border: solid 2px black;  */
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.profile-image{
+    height: 80%;
+    width: 100%;
+    border-radius:10px;
+    
+}
+
+.profileName{
+    text-align: center;
+    color : black;
+    font-size: 14px;
+    font-family: Roboto;
+    font-weight: bold;
+}
