@@ -1,0 +1,84 @@
+.background-home{
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(rgb(38, 36, 36),rgb(5, 4, 4));
+    /* overflow-x: auto; */
+}
+
+.mainword{
+    color: white
+}
+
+.homeNavBar{
+    width: 100%;
+    height: 8%;
+    padding: 8px;
+    position: relative;
+    border: solid 2px white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: san 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    z-index: 9999;
+}
+
+
+.navbarSymbolContainer{
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    border : solid 2px white;
+    height: 75%;
+    
+
+}
+
+.icons{
+    color: white;
+}
+
+
+
+.mainArea{
+    height: 92%;
+    width: 100vw;
+    overflow-x: auto;
+    border: solid 2px white;
+}
+
+.stickyContainer{
+    height: 7%;
+    /* margin: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px; */
+    /* margin: 10px; */
+    margin-left: 8px;
+    /* border: solid 2px white; */
+    position: sticky;
+    z-index: 9998;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.categorybuttoncontainer{
+    width: auto;
+    border: solid 2px white;
+    border-radius: 10px;
+    padding: 1%;
+    margin: 5px;
+    margin-left:0px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.categorybutton{
+    background-color: transparent;
+    color: white;
+    padding: 0px;
+    padding-right: 2%;
+    padding-left: 2%;
+    border-radius: 10px;
+}

@@ -1,0 +1,21 @@
+.categorybuttoncontainer{
+    width: auto;
+    border: solid 2px white;
+    border-radius: 10px;
+    padding: 1%;
+    margin: 5px;
+    margin-left:0px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.categorybutton{
+    background-color: transparent;
+    color: white;
+    padding: 0px;
+    padding-right: 2%;
+    padding-left: 2%;
+    border-radius: 10px;
+}
