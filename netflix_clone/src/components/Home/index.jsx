@@ -32,7 +32,7 @@ const Home = () => {
 
                 const data = await response.json();
                 console.log(data.results);
-                setMovieData([data.results])// This will show the list of trending movies
+                setMovieData(data.results)// This will show the list of trending movies
             } catch (error) {
                 console.error('Fetch error:', error);
             }
@@ -74,7 +74,7 @@ const Home = () => {
                         onSlideChange={() => console.log('slide change')}
                         onSwiper={(swiper) => console.log(swiper)}
                     >
-                        {movieData.map(each => {
+                        {movieData && movieData.map(each => {
                             return (
                                 <SwiperSlide className='swiperborder' key={each.title}>
                                     <img className='courimq' src={"https://image.tmdb.org/t/p/" + "w500" + each.poster_path} alt={each.title} />
