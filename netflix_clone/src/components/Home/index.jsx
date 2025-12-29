@@ -8,43 +8,52 @@ import 'swiper/css';
 
 
 import CategoryButton from '../categorybutton'
+import Carousel from '../carousel';
+
+import { fetchTrendingMovies } from '../tmdb';
+
+// tmdbGenres.js
+
+ const tmdb_genre_list = [
+    { id: 28, name: "Action" },
+    { id: 12, name: "Adventure" },
+    { id: 16, name: "Animation" },
+    { id: 35, name: "Comedy" },
+    { id: 80, name: "Crime" },
+    { id: 99, name: "Documentary" },
+    { id: 18, name: "Drama" },
+    { id: 10751, name: "Family" },
+    { id: 14, name: "Fantasy" },
+    { id: 36, name: "History" },
+    { id: 27, name: "Horror" },
+    { id: 10402, name: "Music" },
+    { id: 9648, name: "Mystery" },
+    { id: 10749, name: "Romance" },
+    { id: 878, name: "Science Fiction" },
+    { id: 10770, name: "TV Movie" },
+    { id: 53, name: "Thriller" },
+    { id: 10752, name: "War" },
+    { id: 37, name: "Western" },
+];
 
 const Home = () => {
     const { name, movieData, setMovieData } = useContext(MyContext)
     console.log(name)
 
     useEffect(() => {
-        const API_TOKEN = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMDlkYmM3Yjc4YmJhZDZjNjI4NWI3MTI4MTU4MWRhMiIsIm5iZiI6MTc2Njg0MDc2My42NDQsInN1YiI6IjY5NGZkOWJiYzM4YzMxYTJjZjdhYzA5NCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.PYuY3VdjKvm4JpYHm2PaIMb-MxI3-HnrvPdsBAElX1o'; // Use the Read Access Token here
-        const BASE_URL = 'https://api.themoviedb.org/3';
-        async function fetchTrendingMovies() {
-            try {
-                const response = await fetch(`${BASE_URL}/trending/movie/day`, {
-                    method: 'GET',
-                    headers: {
-                        'Authorization': `Bearer ${API_TOKEN}`,
-                        'Content-Type': 'application/json'
-                    }
-                });
 
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-
-                const data = await response.json();
-                console.log(data.results);
-                setMovieData(data.results)// This will show the list of trending movies
-            } catch (error) {
-                console.error('Fetch error:', error);
-            }
+        async function getmovie(){
+            const data = await fetchTrendingMovies()
+            setMovieData(data)
         }
+        getmovie()
 
-        fetchTrendingMovies();
     }, [])
 
     return (
         <div className='background-home'>
             <div className='homeNavBar'>
-                <p className='mainword' >For {name == "" ? "Guest" : name}</p>
+                <h2 className='mainword' >For {name == "" ? "Guest" : name}</h2>
                 <div className='navbarSymbolContainer'>
                     <span class="material-symbols-outlined icons">
                         cast
@@ -66,42 +75,18 @@ const Home = () => {
                     <CategoryButton name="Category" />
                     <CategoryButton name="Movie" />
                 </div>
-                <div className='couDIV'>
-                    <Swiper
-                        className='swipermainborder'
-                        spaceBetween={15}
-                        slidesPerView={3}
-                        onSlideChange={() => console.log('slide change')}
-                        onSwiper={(swiper) => console.log(swiper)}
-                    >
-                        {movieData && movieData.map(each => {
-                            return (
-                                <SwiperSlide className='swiperborder' key={each.title}>
-                                    <img className='courimq' src={"https://image.tmdb.org/t/p/" + "w500" + each.poster_path} alt={each.title} />
-                                </SwiperSlide>
-                            )
-                        })}
 
-
-                        {/* <SwiperSlide className='swiperborder'>
-                            <img className='courimq' src='/Fight_Club.png' alt="fight club" />
-                        </SwiperSlide>
-                        <SwiperSlide className='swiperborder'>
-                            <img className='courimq' src='/Fight_Club.png' alt="fight club" />
-                        </SwiperSlide>
-                        <SwiperSlide className='swiperborder'>
-                            <img className='courimq' src='/Fight_Club.png' alt="fight club" />
-                        </SwiperSlide>
-                        <SwiperSlide className='swiperborder'>
-                            <img className='courimq' src='/Fight_Club.png' alt="fight club" />
-                        </SwiperSlide> */}
-                    </Swiper>
-                </div>
+         
+                <>
+                    <h2 className="categoryHeading"> Movie</h2>
+                        <Carousel movieData = {movieData}/>
+                        <h2 className="categoryHeading"> Movie</h2>
+                        <Carousel movieData = {movieData}/>
+                        <h2 className="categoryHeading"> Movie</h2>
+                        <Carousel movieData = {movieData}/>
+                </>
 
             </div>
-
-
-
         </div>
     )
 }
