@@ -45,6 +45,7 @@ import { fetchTrendingMovies } from '../tmdb';
 const Home = () => {
     const { name, movieData, setMovieData } = useContext(MyContext)
     console.log(name)
+    console.log(movieData&&movieData[0].poster_path,'posterpath')
 
 
     const [StateAdventureList, setAdventureList] = useState([])
@@ -114,12 +115,18 @@ const Home = () => {
             </div>
 
             <div className='mainArea'>
+
                 <div className='stickyContainer'>
                     {/* button and button container */}
                     <CategoryButton name="Category" />
                     <CategoryButton name="Movie" />
                 </div>
+                 
+                 <div className='importantMovieContainer'>
+                      <div className='importantImageContainer' style={{backgroundImage:`url(${movieData&&'https://image.tmdb.org/t/p/' +'w500'+movieData[0].poster_path})`}}>
 
+                      </div>
+                 </div>
 
                 <>
                     <h2 className="categoryHeading"> Movie</h2>

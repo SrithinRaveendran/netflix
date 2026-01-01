@@ -95,6 +95,26 @@
     
 } */
 
+.importantMovieContainer{
+    height: 70%;
+    width: 100%;
+    border: solid 2px white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.importantImageContainer{
+    height: 100%;
+    width: 92%;
+    border: solid 2px white;
+    border-radius: 5px;
+    /* this should be done using the styled component  */
+    /* background-image: url('/anime.png');  */
+    
+    background-size: cover;
+}
+
 .categoryHeading{
     color: white;
     font-family: sans-serif;
