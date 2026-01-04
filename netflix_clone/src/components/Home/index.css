@@ -16,7 +16,7 @@
     height: 8%;
     padding: 8px;
     position: relative;
-    border: solid 2px white;
+    /* border: solid 2px white; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,7 +30,7 @@
     width: 40%;
     max-width: 250px;
     justify-content: space-between;
-    border : solid 2px white;
+    /* border : solid 2px white; */
     height: 75%;
     
 
@@ -46,7 +46,7 @@
     height: 92%;
     width: 100vw;
     overflow-x: auto;
-    border: solid 2px white;
+    /* border: solid 2px white; */
     /* margin-left: 8px; */
 }
 
@@ -57,7 +57,7 @@
     margin-bottom: 0px; */
     /* margin: 10px; */
     /* margin-left: 8px; */
-    border: solid 2px white;
+    /* border: solid 2px white; */
     position: sticky;
     z-index: 9998;
     display: flex;
@@ -98,8 +98,8 @@
 .importantMovieContainer{
     height: 70%;
     width: 100%;
-    border: solid 2px white;
-    border-radius: 5px;
+    /* border: solid 2px white; */
+    /* border-radius: 5px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,11 +107,8 @@
 .importantImageContainer{
     height: 100%;
     width: 92%;
-    border: solid 2px white;
-    border-radius: 5px;
-    /* this should be done using the styled component  */
-    /* background-image: url('/anime.png');  */
-    
+    /* border: solid 2px white; */
+    border-radius: 5px; 
     background-size: cover;
 }
 

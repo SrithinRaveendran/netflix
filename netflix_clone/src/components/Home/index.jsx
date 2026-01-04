@@ -45,7 +45,7 @@ import { fetchTrendingMovies } from '../tmdb';
 const Home = () => {
     const { name, movieData, setMovieData } = useContext(MyContext)
     console.log(name)
-    console.log(movieData&&movieData[0].poster_path,'posterpath')
+    console.log(movieData && movieData[0].poster_path, 'posterpath')
 
 
     const [StateAdventureList, setAdventureList] = useState([])
@@ -68,7 +68,7 @@ const Home = () => {
         // only based on the list above which i got from api document
         // so that i can avoid a api to get the genre code details.. later i will make it automate using object
 
-        
+
         const RomanceList = []
         const adventurefunction = () => {
             const AdventureList = []
@@ -76,7 +76,7 @@ const Home = () => {
                 if (each.genre_ids.includes(12)) {
                     AdventureList.push(each)
                 }
-                
+
             })
             //remember you canot directly update the state from 
             // useEffect hook its dould be inside the funtion
@@ -121,12 +121,11 @@ const Home = () => {
                     <CategoryButton name="Category" />
                     <CategoryButton name="Movie" />
                 </div>
-                 
-                 <div className='importantMovieContainer'>
-                      <div className='importantImageContainer' style={{backgroundImage:`url(${movieData&&'https://image.tmdb.org/t/p/' +'w500'+movieData[0].poster_path})`}}>
 
-                      </div>
-                 </div>
+                <div className='importantMovieContainer'>
+                    <div className='importantImageContainer' style={{ backgroundImage: `url(${movieData && 'https://image.tmdb.org/t/p/' + 'w500' + movieData[0].poster_path})` }}>
+                    </div>
+                </div>
 
                 <>
                     <h2 className="categoryHeading"> Movie</h2>
