@@ -14,8 +14,8 @@ function App() {
     <BrowserRouter>
     <MyContextProvider>
       <Routes>
-        <Route path="/" element = {<FrontPage/>}/>
-        <Route path="/Home" element={<Home/>}/>
+        <Route path="/" element = {<FrontPage/>} />
+        <Route path='/home' element={<Home/>} />
       </Routes>
       </MyContextProvider>
     </BrowserRouter>

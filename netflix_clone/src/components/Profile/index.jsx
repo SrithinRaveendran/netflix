@@ -10,7 +10,7 @@ const Profile = (props) => {
     const onProfileclick = (nameofprofile) => {
         setName(nameofprofile)  
         // console.log(name)
-        navigate("/Home")
+        navigate('/home')
     }
 
     return (

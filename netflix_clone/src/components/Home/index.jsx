@@ -60,7 +60,7 @@ const Home = () => {
         }
         getmovie()
 
-    }, [])
+    }, [setMovieData])
 
     useEffect(() => {
         //(i feel this is dump idea to use here need to find the another good way)
